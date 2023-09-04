@@ -1,0 +1,17 @@
+<div class="sentiment">
+    <h3>{{symbolName}}</h3>
+    <div>
+        <div *ngFor="let data of sentimentLast3Months;trackBy: sentimentTrackBy" class="col-span-3">
+            <div class="sub">
+                <p>{{ data['month'] | monthName }}</p>
+                <p>Change: {{ data['change']}}</p>
+                <p>MSPR: {{ data['mspr']}}</p>
+            </div>
+            <div [ngClass]="{'isPositive' : data.change >= 0, 'isNegative' : data.change <= 0 }">
+            </div>
+        </div>
+    </div>
+</div>
+<a [routerLink]="['/']">
+    <button>&#60; Back to list of stocks</button>
+</a>

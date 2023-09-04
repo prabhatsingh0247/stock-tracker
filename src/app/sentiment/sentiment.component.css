@@ -1,0 +1,14 @@
+.sentiment{
+    border: solid 3px #000;
+    padding: 0 30px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.col-span-3{
+    width: 33%;
+    float: left
+}
+.sub{
+    width: 50%;
+    float: left;    
+}

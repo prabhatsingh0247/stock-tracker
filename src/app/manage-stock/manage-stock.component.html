@@ -1,0 +1,30 @@
+<div *ngFor="let data of stockData; let parentIndex = index" class="manageStockList">
+    <div class="main">
+        <div class="part-50">
+            <h2>{{data['description']}} ({{data['symbol']}})</h2>
+        </div>
+        <div class="part-50 close">
+            <button (click)="removeStock(data['symbol'])">X</button>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="part-30">
+            <p>Change today: {{data['pc']}}</p>
+            <p>Current price: {{data['c'] | currency:'USD':'symbol':'.2'}} </p>
+        </div>
+        <div class="part-30">
+            <p>Openinig price: {{data['o'] | currency:'USD':'symbol':'.2'}} </p>
+            <p>High price: {{data['h'] | currency:'USD':'symbol':'.2'}} </p>
+        </div>
+        <div class="part-30">
+            <div [ngClass]="{'isPositive' : data.pc >= 0, 'isNegative' : data.pc <= 0 }">
+            </div>
+        </div>
+    </div>
+    <div class="sentiment">
+        <a [routerLink]="['/sentiment', data['symbol']]">
+            <button>Go to social sentiment details &#62;</button>
+        </a>
+    </div>
+</div>

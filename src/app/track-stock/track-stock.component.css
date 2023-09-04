@@ -1,0 +1,25 @@
+.trackFrom {
+    border: solid 3px #000;
+    padding: 0 30px;
+    margin-bottom: 40px;
+}
+
+.trackFrom form {
+    padding: 10px 20px;
+    margin: 20px;
+}
+
+#stockInput {
+    font-weight: bold;
+    border: solid;
+    border-radius: 7px;
+    padding: 5px 10px;
+}
+
+#trackBtn {
+    font-weight: bold;
+    border: solid;
+    cursor: pointer;
+    border-radius: 7px;
+    padding: 5px 10px;
+}
